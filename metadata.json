@@ -1,0 +1,8 @@
+{
+  "name": "Code Security Auditor",
+  "description": "Analyze code for vulnerabilities and store secure audit certification on-chain via GenLayer Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
