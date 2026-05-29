@@ -25,7 +25,7 @@ export default function WalletConnect({
   const [isAddingNetwork, setIsAddingNetwork] = useState(false);
 
   // Parse chain ID helper
-  const isGenLayerStudio = chainId === "0x3a9b" || chainId === "15003"; // 15003 in hex is 0x3a9b
+  const isGenLayerStudio = chainId === "0xf22f" || chainId === "61999" || chainId === "0x3a9b" || chainId === "15003"; // 支持新(61999/0xf22f)和旧(15003/0x3a9b)链ID
 
   const copyAddress = () => {
     if (walletAddress) {
@@ -68,7 +68,7 @@ export default function WalletConnect({
         method: "wallet_addEthereumChain",
         params: [
           {
-            chainId: "0x3a9b", // 15003 in decimal
+            chainId: "0xf22f", // 61999 in decimal (0xf22f)
             chainName: "GenLayer Studio",
             nativeCurrency: {
               name: "GEN",
@@ -76,7 +76,7 @@ export default function WalletConnect({
               decimals: 18,
             },
             rpcUrls: ["https://studio.genlayer.com/api"],
-            blockExplorerUrls: [],
+            blockExplorerUrls: ["https://explorer-studio.genlayer.com"],
           },
         ],
       });
